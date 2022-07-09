@@ -1,12 +1,10 @@
-
-import './App.css';
+import classes from "./App.module.css";
+import UI from "./components/UI/UI";
 
 function App() {
-  return (
-    <div className="App">
-      hello
-    </div>
-  );
+  return <main className={classes.main}>
+    <UI/>
+  </main>;
 }
 
 export default App;
