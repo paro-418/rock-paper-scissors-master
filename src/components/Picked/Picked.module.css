@@ -1,0 +1,64 @@
+.picked {
+  flex-grow: 1;
+  width: fit-content;
+  text-align: center;
+}
+
+.subContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left,
+.right,
+.middle {
+  width: 25vw;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.middle {
+  width: 20vw;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+.pickedImage {
+  background-color: #3b4363;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+.commonImg {
+  height: 15vw;
+  width: 15vw;
+  padding: 1.5rem !important;
+}
+.heading {
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: #fff;
+  border: none;
+  letter-spacing: 0.1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all ;
+  padding: 0.8rem 2.5rem;
+}
+
+.btn:hover {
+  background-color: rgb(236, 236, 236);
+  transform: scale(1.01);
+}

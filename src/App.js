@@ -7,6 +7,7 @@ import paper from "./images/icon-paper.svg";
 import rock from "./images/icon-rock.svg";
 import spock from "./images/icon-spock.svg";
 import scissors from "./images/icon-scissors.svg";
+import { useState } from "react";
 
 const options = [
   {
@@ -30,13 +31,21 @@ const options = [
     image: spock,
   },
 ];
-
 function App() {
+  const [choosed, setChoosed] = useState('');
+
+const whatChoosedReceiver  = (receivedChoosen) => {
+  console.log(receivedChoosen);
+  setChoosed(receivedChoosen);
+} 
+
   return (
     <optContext.Provider
       value={{
         score: 0,
         options: options,
+        whatChoosedReceiver,
+        choosed
       }}
     >
       <main className={classes.main}>
