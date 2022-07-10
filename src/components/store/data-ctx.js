@@ -5,7 +5,6 @@ import rock from "../../images/icon-rock.svg";
 import spock from "../../images/icon-spock.svg";
 import scissors from "../../images/icon-scissors.svg";
 
-
 const options = [
   {
     name: "lizard",
@@ -29,13 +28,14 @@ const options = [
   },
 ];
 
-
 const optContext = React.createContext({
   score: 0,
   options,
   whatChoosed() {},
   choosed: "",
   resetChoosed() {},
+  scoreIncreaseHandler() {},
+  scoreDecreaseHandler() {},
 });
 
 export default optContext;

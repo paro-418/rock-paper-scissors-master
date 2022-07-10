@@ -14,12 +14,11 @@
 .right,
 .middle {
   width: 25vw;
-  height: 90%;
+  min-height: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
-  row-gap: 3rem;
 }
 
 .middle {
@@ -54,7 +53,7 @@
   letter-spacing: 0.1rem;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: all ;
+  transition: all;
   padding: 0.8rem 2.5rem;
 }
 
