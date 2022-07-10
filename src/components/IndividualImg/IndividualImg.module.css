@@ -10,40 +10,69 @@
   width: fit-content;
 }
 
-.commonImg{
+.commonImg {
   border: none;
   background-color: #fff;
   border-radius: 100%;
   width: 8vw;
   height: 8vw;
   padding: 1rem;
-
 }
-
+@media only screen and (max-width: 961px) {
+  .commonImg {
+    width: 6vw;
+    height: 6vw;
+    padding: 0.7rem;
+  }
+}
 
 .lizardContainer {
   background-image: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
   bottom: -8vh;
   left: 10vw;
 }
-.paperContainer {
-  right: 5vw;
-  top: 24vh;
-  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-}
-.scissorsContainer {
-  background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  left: 19vw;
-  top: 3vh;
-}
 .rockContainer {
   background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   bottom: -8vh;
   right: 10vw;
 }
+@media only screen and (max-width: 961px) {
+  .lizardContainer {
+    bottom: 0vh;
+    left: 13vw;
+  }
+  .rockContainer {
+    bottom: 0;
+    right: 13vw;
+  }
+}
 
+.scissorsContainer {
+  background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  left: 20vw;
+  top: 3vh;
+}
+@media only screen and (max-width: 961px) {
+  .scissorsContainer {
+    top: 8vh;
+  }
+}
+
+.paperContainer {
+  right: 5vw;
+  top: 24vh;
+  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
 .spockContainer {
   background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
   top: 24vh;
   left: 5vw;
+}
+@media only screen and (max-width: 961px) {
+  .paperContainer {
+    right: 10vw;
+  }
+  .spockContainer {
+    left: 10vw;
+  }
 }

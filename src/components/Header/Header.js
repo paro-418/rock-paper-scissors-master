@@ -7,7 +7,7 @@ const Header = () => {
   const optctx = useContext(optContext);
   return (
     <div className={classes.header}>
-      <img src={bonus} />
+      <img src={bonus} className={classes.bonus} />
       <span className={classes.scoreBoard}>
         <p className={classes.scoreHeading}>score</p>
         <span className={classes.score}>{optctx.score}</span>

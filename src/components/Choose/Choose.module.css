@@ -11,12 +11,8 @@
   transform: translate(-50%, -40%);
   width: 33vw;
 }
-
-.imgContainer img {
-  z-index: 3;
-  width: 7vw;
-  height: 7vw;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 100%;
+@media only screen and (max-width: 961px) {
+  .pentagon {
+    width: 25vw;
+  }
 }
