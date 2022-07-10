@@ -23,7 +23,7 @@
 
 .lizardContainer {
   background-image: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
-  bottom: 4vh;
+  bottom: -8vh;
   left: 10vw;
 }
 .paperContainer {
@@ -34,11 +34,11 @@
 .scissorsContainer {
   background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   left: 19vw;
-  top: 4vh;
+  top: 3vh;
 }
 .rockContainer {
   background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  bottom: 4vh;
+  bottom: -8vh;
   right: 10vw;
 }
 

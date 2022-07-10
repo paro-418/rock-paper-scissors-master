@@ -1,6 +1,7 @@
 import BodyPart from "../BodyPart/BodyPart";
 import Button from "../Button/Button";
 import Header from "../Header/Header";
+import Rules from "../Rules/Rules";
 import classes from "./UI.module.css";
 
 const UI = () => {
@@ -11,6 +12,7 @@ const UI = () => {
       <div className={classes.btnDiv}>
         <Button className={classes.btn}>Rules</Button>
       </div>
+      <Rules/>
     </main>
   );
 };

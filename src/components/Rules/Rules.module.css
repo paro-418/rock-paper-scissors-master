@@ -1,0 +1,37 @@
+.rules{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.596);
+    
+}
+
+.rulesContainer{
+    padding: 2rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.heading{
+    text-transform: uppercase;
+    color: #3b4363;
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
