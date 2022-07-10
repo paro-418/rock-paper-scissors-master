@@ -1,0 +1,60 @@
+.choose {
+  min-width: 50vw;
+  position: relative;
+  flex-grow: 1;
+}
+
+.pentagon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+}
+
+.imgContainer {
+  position: absolute;
+  overflow: visible;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.imgContainer img {
+  z-index: 3;
+  width: 7vw;
+  height: 7vw;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.lizardContainer {
+  background-image: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  bottom: 4vh;
+  left: 10vw;
+}
+.paperContainer {
+  right: 5vw;
+  top: 24vh;
+  background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.scissorsContainer {
+  background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  left: 20vw;
+  top: 4vh;
+}
+.rockContainer {
+  background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  bottom: 4vh;
+  right: 10vw;
+}
+
+.spockContainer {
+  background-image: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  top: 24vh;
+  left: 5vw;
+}
