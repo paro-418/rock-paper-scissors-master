@@ -3,13 +3,19 @@ import classes from "./Picked.module.css";
 import optContext from "../store/data-ctx";
 import { useContext } from "react";
 import Button from "../Button/Button";
+import { useState } from "react";
 
-const Picked = (props) => {
+const Picked = () => {
+  const [gameOver, setGameOver] = useState(true);
   const optctx = useContext(optContext);
   const pickedImage = optctx.options.find(
     (obj) =>
       obj.name.trim().toLowerCase() === optctx.choosed.trim().toLowerCase()
   );
+
+  const chooseHandler = () => {
+    optctx.resetChoosed();
+  };
   return (
     <div className={classes.picked}>
       <div className={classes.subContainer}>
@@ -22,10 +28,14 @@ const Picked = (props) => {
             commonImg={classes.commonImg}
           />
         </div>
-        <div className={classes.middle}>
-          <h1 className={classes.heading}>you win </h1>
-          <Button className = {classes.btn}>play again</Button>
-        </div>
+        {gameOver && (
+          <div className={classes.middle}>
+            <h1 className={classes.heading}>you win </h1>
+            <Button className={classes.btn} callFunction={chooseHandler}>
+              play again
+            </Button>
+          </div>
+        )}
         <div className={classes.right}>
           <h1 className={classes.heading}>the house picked</h1>
           <IndividualImg

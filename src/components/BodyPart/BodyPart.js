@@ -6,7 +6,7 @@ import Picked from "../Picked/Picked";
 
 const BodyPart = (props) => {
   const optctx = useContext(optContext);
-//   const pickedImage = optctx.options.find( obj => obj.name.trim().toLowerCase() === optctx.choosed.trim().toLowerCase())
+  // const pickedImage = optctx.options.find( obj => obj.name.trim().toLowerCase() === optctx.choosed.trim().toLowerCase())
 
   return (
     <div className={classes.bodyPart}>

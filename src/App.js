@@ -32,12 +32,16 @@ const options = [
   },
 ];
 function App() {
-  const [choosed, setChoosed] = useState('');
+  const [choosed, setChoosed] = useState("");
 
-const whatChoosedReceiver  = (receivedChoosen) => {
-  console.log(receivedChoosen);
-  setChoosed(receivedChoosen);
-} 
+  const whatChoosedReceiver = (receivedChoosen) => {
+    console.log(receivedChoosen);
+    setChoosed(receivedChoosen);
+  };
+
+  const resetChoosed = () => {
+    setChoosed("");
+  };
 
   return (
     <optContext.Provider
@@ -45,7 +49,8 @@ const whatChoosedReceiver  = (receivedChoosen) => {
         score: 0,
         options: options,
         whatChoosedReceiver,
-        choosed
+        choosed,
+        resetChoosed
       }}
     >
       <main className={classes.main}>
