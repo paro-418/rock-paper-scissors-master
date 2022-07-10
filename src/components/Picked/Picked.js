@@ -3,16 +3,27 @@ import classes from "./Picked.module.css";
 import optContext from "../store/data-ctx";
 import { useContext } from "react";
 import Button from "../Button/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Picked = () => {
   const [gameOver, setGameOver] = useState(true);
+  const [machineChoosed, setMachineChoose] = useState({});
+  console.log(machineChoosed);
   const optctx = useContext(optContext);
   const pickedImage = optctx.options.find(
     (obj) =>
       obj.name.trim().toLowerCase() === optctx.choosed.trim().toLowerCase()
   );
 
+  useEffect(() => {
+    const chooseTimeout = setTimeout(() => {
+      const randomImg = optctx.options[Math.floor(Math.random() * 5)];
+      setMachineChoose(randomImg);
+    }, 500);
+    return () =>{
+      clearTimeout(chooseTimeout);
+    }
+  }, [pickedImage]);
   const chooseHandler = () => {
     optctx.resetChoosed();
   };
@@ -38,12 +49,14 @@ const Picked = () => {
         )}
         <div className={classes.right}>
           <h1 className={classes.heading}>the house picked</h1>
-          <IndividualImg
-            specificName={optctx.choosed}
-            image={pickedImage.image}
-            impClassName={classes.pickedImage}
-            commonImg={classes.commonImg}
-          />
+          {machineChoosed.image && (
+            <IndividualImg
+              specificName={machineChoosed.name}
+              image={machineChoosed.image}
+              impClassName={classes.pickedImage}
+              commonImg={classes.commonImg}
+            />
+          )}
         </div>
       </div>
     </div>
